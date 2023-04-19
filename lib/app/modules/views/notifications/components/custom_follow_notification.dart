@@ -28,7 +28,7 @@ class CustomFollowNotification extends StatelessWidget {
           child: RichText(
             text: TextSpan(
               text: notifications.senderName,
-              style: AppTypography.kBold14.copyWith(color: Colors.black),
+              style: AppTypography.kBold14,
               children: [
                 TextSpan(
                   text: ' started following you. follow back to connect!',

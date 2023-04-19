@@ -1,5 +1,6 @@
 import 'package:chatie/app/controllers/theme_controller.dart';
 import 'package:chatie/app/data/constants/constants.dart';
+import 'package:chatie/app/data/helpers/theme_helper.dart';
 import 'package:chatie/app/modules/views/profile/components/profile_header.dart';
 import 'package:chatie/app/modules/views/profile/components/settings_card.dart';
 import 'package:chatie/app/modules/views/profile/components/theme_mode_selection.dart';
@@ -50,7 +51,7 @@ class _SettingsViewState extends State<SettingsView> {
               height: AppSpacing.tenVertical,
             ),
             Container(
-              color: Colors.white,
+              color: isDarkMode(context) ? AppColors.kGrey : Colors.white,
               padding: EdgeInsets.symmetric(
                 vertical: AppSpacing.twentyVertical,
                 horizontal: AppSpacing.twentyHorizontal,

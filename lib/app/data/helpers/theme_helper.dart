@@ -16,3 +16,6 @@ ThemeMode getThemeMode(String type) {
 
   return themeMode;
 }
+
+bool isDarkMode(BuildContext context) =>
+    Theme.of(context).brightness == Brightness.dark;

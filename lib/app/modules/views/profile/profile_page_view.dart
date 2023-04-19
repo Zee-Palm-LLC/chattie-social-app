@@ -1,4 +1,5 @@
 import 'package:chatie/app/data/constants/constants.dart';
+import 'package:chatie/app/data/helpers/theme_helper.dart';
 import 'package:chatie/app/modules/views/friends/components.dart/custom_friends_button.dart';
 import 'package:chatie/app/modules/views/home/components/feed_card.dart';
 import 'package:chatie/app/modules/widgets/buttons/primary_button.dart';
@@ -58,7 +59,12 @@ class ProfilePageView extends StatelessWidget {
                           AppAssets.kAvatar1,
                         ),
                       ),
-                      border: Border.all(color: Colors.white, width: 6.w),
+                      border: Border.all(
+                        color: isDarkMode(context)
+                            ? AppColors.kGrey
+                            : Colors.white,
+                        width: 6.w,
+                      ),
                     ),
                   ),
                 ),
@@ -70,10 +76,13 @@ class ProfilePageView extends StatelessWidget {
                     width: 60.w,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.white,
+                      color:
+                          isDarkMode(context) ? AppColors.kGrey : Colors.white,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
+                          color: isDarkMode(context)
+                              ? AppColors.kGrey
+                              : Colors.grey.withOpacity(0.5),
                           spreadRadius: 1,
                           blurRadius: 5,
                           offset: const Offset(0, 3),
@@ -136,7 +145,10 @@ class ProfilePageView extends StatelessWidget {
                       backgroundColor: const Color(0xffEBECF0),
                     ),
                     onPressed: () {},
-                    child: const Icon(Icons.more_horiz),
+                    child: const Icon(
+                      Icons.more_horiz,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
@@ -217,14 +229,19 @@ class ProfilePageView extends StatelessWidget {
                 style: AppTypography.kBold22,
               ),
             ),
-            ListView.separated(
-              physics: const NeverScrollableScrollPhysics(),
-              separatorBuilder: (context, index) => SizedBox(
-                height: 10.w,
+            SizedBox(height: AppSpacing.twentyVertical),
+            MediaQuery.removePadding(
+              context: context,
+              removeTop: true,
+              child: ListView.separated(
+                physics: const NeverScrollableScrollPhysics(),
+                separatorBuilder: (context, index) => SizedBox(
+                  height: 10.w,
+                ),
+                itemCount: 5,
+                shrinkWrap: true,
+                itemBuilder: (context, index) => const FeedCard(),
               ),
-              itemCount: 5,
-              shrinkWrap: true,
-              itemBuilder: (context, index) => const FeedCard(),
             ),
           ],
         ),

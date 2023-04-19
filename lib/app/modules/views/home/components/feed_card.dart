@@ -1,4 +1,5 @@
 import 'package:chatie/app/data/constants/constants.dart';
+import 'package:chatie/app/data/helpers/theme_helper.dart';
 import 'package:chatie/app/modules/views/home/components/feed_button.dart';
 import 'package:chatie/app/modules/views/home/components/like_card.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ class FeedCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ColoredBox(
-      color: Colors.white,
+      color: isDarkMode(context) ? AppColors.kGrey : Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

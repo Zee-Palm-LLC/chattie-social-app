@@ -78,7 +78,7 @@ class ThemeModeSelection extends StatelessWidget {
             trailing: Container(
               padding: EdgeInsets.all(5.h),
               decoration: BoxDecoration(
-                color: currentTheme == 'system'
+                color: currentTheme == 'dark'
                     ? Colors.amber
                     : Colors.transparent,
                 shape: BoxShape.circle,

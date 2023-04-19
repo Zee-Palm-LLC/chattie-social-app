@@ -1,4 +1,5 @@
 import 'package:chatie/app/data/constants/constants.dart';
+import 'package:chatie/app/data/helpers/theme_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,7 +15,7 @@ class ProfileHeader extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        color: Colors.white,
+        color: isDarkMode(context) ? AppColors.kGrey : Colors.white,
         padding: EdgeInsets.symmetric(
           vertical: AppSpacing.twentyVertical,
           horizontal: AppSpacing.twentyHorizontal,

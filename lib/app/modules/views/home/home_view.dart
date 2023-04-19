@@ -1,4 +1,5 @@
 import 'package:chatie/app/data/constants/constants.dart';
+import 'package:chatie/app/data/helpers/theme_helper.dart';
 import 'package:chatie/app/modules/views/chat/all_conversation_view.dart';
 import 'package:chatie/app/modules/views/home/components/animated_icon_button.dart';
 import 'package:chatie/app/modules/views/home/components/feed_card.dart';
@@ -16,6 +17,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.25,
+        automaticallyImplyLeading: false,
         title: Image.asset(
           AppAssets.kChattieLogo,
           height: 40.0.h,
@@ -58,10 +60,13 @@ class HomeView extends StatelessWidget {
                       child: Container(
                         height: 45.h,
                         padding: EdgeInsets.symmetric(
-                            horizontal: AppSpacing.tenHorizontal),
+                          horizontal: AppSpacing.tenHorizontal,
+                        ),
                         alignment: Alignment.centerLeft,
                         decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: isDarkMode(context)
+                              ? AppColors.kGrey
+                              : Colors.grey[200],
                           borderRadius: BorderRadius.circular(20.0),
                           border: Border.all(
                             color: Colors.black26,
@@ -83,7 +88,7 @@ class HomeView extends StatelessWidget {
             SizedBox(
               height: 240.h,
               child: Container(
-                color: Colors.white,
+                color: isDarkMode(context) ? AppColors.kGrey : Colors.white,
                 padding: EdgeInsets.symmetric(vertical: 10.h),
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,

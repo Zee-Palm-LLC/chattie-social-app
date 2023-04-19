@@ -1,5 +1,6 @@
 import 'package:chatie/app/data/constants/constants.dart';
 import 'package:chatie/app/data/enums/notification_type.dart';
+import 'package:chatie/app/data/helpers/theme_helper.dart';
 import 'package:chatie/app/model/notification_model.dart';
 import 'package:chatie/app/modules/views/notifications/components/custom_follow_notification.dart';
 import 'package:chatie/app/modules/views/notifications/components/custom_like_notification.dart';
@@ -35,7 +36,7 @@ class Notifications extends StatelessWidget {
               height: 10.h,
             ),
             ColoredBox(
-              color: Colors.white,
+              color: isDarkMode(context) ? AppColors.kGrey : Colors.white,
               child: ListView.separated(
                 separatorBuilder: (context, index) => SizedBox(height: 10.h),
                 physics: const NeverScrollableScrollPhysics(),
@@ -71,7 +72,7 @@ class Notifications extends StatelessWidget {
               height: 10.h,
             ),
             ColoredBox(
-              color: Colors.white,
+              color: isDarkMode(context) ? AppColors.kGrey : Colors.white,
               child: ListView.separated(
                 separatorBuilder: (context, index) => SizedBox(height: 10.h),
                 physics: const NeverScrollableScrollPhysics(),

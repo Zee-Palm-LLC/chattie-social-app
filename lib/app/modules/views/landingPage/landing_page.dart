@@ -8,7 +8,6 @@ import 'package:chatie/app/modules/views/notifications/notifications.dart';
 import 'package:chatie/app/modules/views/profile/settings_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rive/rive.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -27,7 +26,7 @@ class _LandingPageState extends State<LandingPage>
     const SettingsView(),
   ];
   Menu selectedBottomNav = bottomNavBarMenu.first;
-  
+
   void updateSelectedBtmNav(Menu menu) {
     if (selectedBottomNav != menu) {
       setState(() {
@@ -84,7 +83,7 @@ class _LandingPageState extends State<LandingPage>
               bottom: AppSpacing.tenVertical,
             ),
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: AppColors.kGrey,
               borderRadius: BorderRadius.circular(10.r),
             ),
             child: Row(
