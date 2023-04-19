@@ -1,0 +1,1 @@
+enum CameraEnum { front, back }

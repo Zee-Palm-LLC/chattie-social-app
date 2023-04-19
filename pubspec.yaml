@@ -1,0 +1,55 @@
+name: chatie
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.19.0 <3.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  flutter: 
+    sdk: flutter
+  google_fonts: ^4.0.3
+  get_storage: ^2.1.1
+  flutter_screenutil: ^5.7.0
+  flutter_native_splash: ^2.2.19
+  simple_animations: ^5.0.0+3
+  animate_do: ^3.0.2
+  flutter_svg: ^2.0.4
+  align_positioned: ^3.0.0
+  surf_lint_rules: ^2.1.0
+  rive: ^0.9.1
+  camera: ^0.10.4
+  photo_manager: ^2.6.0
+  path_provider: ^2.0.14
+  widgets_to_image: ^0.0.2
+  pin_code_text_field: ^1.8.0
+ 
+  
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+  flutter_launcher_icons: ^0.12.0
+
+flutter_native_splash:
+  color: '#ffffff'
+  image: 'assets/images/splashLogo.png'
+  fullscreen: true
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path_android: "assets/images/appIcon.jpeg"
+  image_path_ios: "assets/images/appIcon.jpeg"
+
+flutter: 
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/rive/
+
