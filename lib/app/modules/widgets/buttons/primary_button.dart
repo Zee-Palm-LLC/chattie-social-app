@@ -9,6 +9,7 @@ class PrimaryButton extends StatefulWidget {
   final double? height;
   final double? borderRadius;
   final double? fontSize;
+  final Color? color;
   const PrimaryButton({
     required this.onTap,
     required this.text,
@@ -16,6 +17,7 @@ class PrimaryButton extends StatefulWidget {
     this.width,
     this.borderRadius,
     this.fontSize,
+    this.color,
     Key? key,
   }) : super(key: key);
 
@@ -72,13 +74,15 @@ class _PrimaryButtonState extends State<PrimaryButton>
             alignment: Alignment.center,
             width: widget.width ?? double.maxFinite,
             decoration: BoxDecoration(
-              color: Colors.orange,
+              color: widget.color ?? Colors.orange,
               borderRadius: BorderRadius.circular(widget.borderRadius ?? 10.r),
             ),
             child: Text(
               widget.text,
-              style: AppTypography.kBold16
-                  .copyWith(color: Colors.white, fontSize: widget.fontSize),
+              style: AppTypography.kBold16.copyWith(
+                color: widget.color == null ? Colors.white : Colors.black,
+                fontSize: widget.fontSize,
+              ),
             ),
           ),
         ),

@@ -25,6 +25,7 @@ dependencies:
   path_provider: ^2.0.14
   widgets_to_image: ^0.0.2
   pin_code_text_field: ^1.8.0
+  flutter_custom_clippers: ^2.1.0
  
   
 
