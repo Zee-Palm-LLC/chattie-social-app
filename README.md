@@ -1,16 +1,12 @@
-# chatie
+# Zee Palm UI Code
 
-A new Flutter project.
+Social App (Chattie) UI done with Flutter 3.7.0
 
-## Getting Started
+## Details
 
-This project is a starting point for a Flutter application.
+This project includes a complete functional Social App (Chattie) UI with all the screens.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://user-images.githubusercontent.com/128903428/234861386-89b849b1-b333-4bdd-a56f-1736a63b84d6.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/128903428/234862222-56f1bd5d-30fc-4d94-bfce-206f74830100.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/128903428/234862511-bf960b15-1834-4c9e-8cc9-57e5e9813022.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/128903428/234862745-4b7c69cd-3de7-4948-974c-50ae9ffa1f9f.png" width="200" height="400" />
